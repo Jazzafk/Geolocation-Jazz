@@ -1,0 +1,75 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
+    <style>
+      .map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+ 
+<body>
+  
+  
+    
+  <h2 id="demo">map</h2>
+
+    <div id="map" class="map"></div>
+
+<script>
+
+alert ("Yes!")
+
+
+
+var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([lat, long]),
+          zoom: 4
+        })
+      });
+
+
+  
+  
+      function getLocation()
+      
+
+  function getLocation() {
+
+if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+  
+    } else {
+     alert( "Geolocation is not supported by this browser.");
+    }
+  }
+
+
+
+  function showPosition(position) {
+   lat = position.coords.latitude; 
+   long = position.coords.longitude;
+
+    alert (lat + long)
+}
+    
+  
+  
+
+  
+</script>
+
+  </body>
+</html>
+
+
+
